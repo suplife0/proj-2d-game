@@ -76,9 +76,9 @@ public class UIManager
 		if (string.IsNullOrEmpty(name))
 			name = typeof(T).Name;
 
-		GameObject prefab = Managers.Resource.Load<GameObject>($"Prefabs/UI/Popup/{name}");
+		GameObject prefab = Managers.Resource.Load<GameObject>($"Prefabs/{name}");
 
-		GameObject go = Managers.Resource.Instantiate($"UI/Popup/{name}");
+		GameObject go = Managers.Resource.Instantiate($"{name}");
 		T popup = Utils.GetOrAddComponent<T>(go);
 		_popupStack.Push(popup);
 
