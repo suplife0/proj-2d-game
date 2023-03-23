@@ -48,7 +48,6 @@ public class PlayerController : MonoBehaviour
     private void Move(Vector2 direction)
     {
         direction.Normalize();
-
         this.transform.position += (Vector3)(direction * (0.01f * speed));
     }
 
